@@ -1,0 +1,17 @@
+// ==UserScript==
+// @name         Parfumo-paging
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  adds missing paging on the bottom of the page
+// @author       Szymon Kaleta
+// @include      https://www.parfumo.net/Fragrance_Note/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+let el = document.querySelector("div[class='paging']");
+let clone = el.cloneNode(true);
+    document.querySelector("div[class='main']").appendChild(clone);
+    // Your code here...
+})();
